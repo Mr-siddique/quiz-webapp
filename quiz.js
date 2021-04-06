@@ -24,12 +24,12 @@ const quizData = [
         ans: "d"
     },
     {
-        question: "HTML stands for.",
+        question: "HTML stands for",
         a: 'cascading style sheet',
         b: 'hyperText markup language',
         c: 'none of these',
         d: 'all of these',
-        e: 'b'
+        ans: 'b'
     },
     {
         question: "who is called missile man",
@@ -50,11 +50,6 @@ const quizData = [
 ]
 let currQuestion = 0;
 let score = 0;
-const question = document.getElementsByTagName("h2")[0];
-const a = document.getElementById('ques_a');
-const b = document.getElementById('ques_b');
-const c = document.getElementById('ques_c');
-const d = document.getElementById('ques_d');
 const quizContainer=document.getElementsByClassName('quiz-container')[0];
 const quizHeader=document.getElementsByClassName('quiz-header')[0];
 const btn = document.getElementsByTagName('button')[0];
@@ -83,6 +78,7 @@ function loadNextQuestion() {
 function calculateScore(ans){
  if(ans==quizData[currQuestion].ans){
  score++; 
+ console.log(score);
   }
 }
 loadNextQuestion();
